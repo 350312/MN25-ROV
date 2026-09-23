@@ -96,7 +96,7 @@ export const MissionSection: React.FC<MissionSectionProps> = ({
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-5">
           <div className="flex items-center gap-3">
             <img
-              src="/src/assets/images/bup_mn25_logo_1790137193440.jpg"
+              src="/assets/images/bup_mn25_logo_1790137193440.jpg"
               alt="MN -25 Logo"
               className="w-5 h-5 rounded-full object-cover border border-amber-500/40"
             />
@@ -230,7 +230,7 @@ export const MissionSection: React.FC<MissionSectionProps> = ({
         <div className="pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs font-mono">
           <div className="text-slate-400 tracking-wider flex items-center gap-2">
             <img
-              src="/src/assets/images/bup_mn25_logo_1790137193440.jpg"
+              src="/assets/images/bup_mn25_logo_1790137193440.jpg"
               alt="MN -25 Logo"
               className="w-4 h-4 rounded-full object-cover border border-amber-500/40"
             />

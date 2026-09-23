@@ -47,7 +47,7 @@ export const TeamSection: React.FC = () => {
         <div className="max-w-3xl space-y-3">
           <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-amber-300 font-bold">
             <img
-              src="/src/assets/images/bup_mn25_logo_1790137193440.jpg"
+              src="/assets/images/bup_mn25_logo_1790137193440.jpg"
               alt="MN -25 Logo"
               className="w-4 h-4 rounded-full object-cover border border-amber-500/50"
             />

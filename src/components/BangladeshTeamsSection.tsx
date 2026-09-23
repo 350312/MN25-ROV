@@ -148,7 +148,7 @@ export const BangladeshTeamsSection: React.FC = () => {
               acronym: 'BUP MN -25',
               benchmark: 'Differential Bevel Gear Rocker-Bogie, ROS 2 LiDAR Costmapping & 5-DOF Cycloidal Robotic Arm',
               status: 'HOST PROGRAM',
-              image: '/src/assets/images/monpura25_cad_sample_1790136646700.jpg',
+              image: '/assets/images/monpura25_cad_sample_1790136646700.jpg',
               models: ['MN -25 MK-I Prototype', 'MN -25 MK-II Telemetry Rig', 'MN -25 MK-III Autonomous Scout (Design Sample Slide 15)'],
               keySpecs: '6-Wheel Rocker Bogie • Red Wheel Rims • Stereo Mast Head • 5.0kg Cycloidal Arm',
             })}
@@ -158,7 +158,7 @@ export const BangladeshTeamsSection: React.FC = () => {
               {/* CAD Design Sample Image with MN -25 Floating Emblem */}
               <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-950">
                 <img
-                  src="/src/assets/images/monpura25_cad_sample_1790136646700.jpg"
+                  src="/assets/images/monpura25_cad_sample_1790136646700.jpg"
                   alt="MN -25 Rover CAD Design Sample"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
@@ -169,7 +169,7 @@ export const BangladeshTeamsSection: React.FC = () => {
                 <div className="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between">
                   <span className="inline-flex items-center gap-1.5 text-[10px] font-mono tracking-wider px-2 py-0.5 rounded bg-black/80 border border-amber-500/50 text-amber-300 font-bold backdrop-blur-sm">
                     <img
-                      src="/src/assets/images/bup_mn25_logo_1790137193440.jpg"
+                      src="/assets/images/bup_mn25_logo_1790137193440.jpg"
                       alt="MN -25 Logo"
                       className="w-3.5 h-3.5 rounded-full object-cover"
                     />
@@ -201,7 +201,7 @@ export const BangladeshTeamsSection: React.FC = () => {
                     </div>
                   </div>
                   <img
-                    src="/src/assets/images/bup_mn25_logo_1790137193440.jpg"
+                    src="/assets/images/bup_mn25_logo_1790137193440.jpg"
                     alt="MN -25 Emblem"
                     className="w-8 h-8 rounded-full object-cover border border-amber-500/60 shadow-[0_0_10px_rgba(245,158,11,0.3)] shrink-0"
                   />

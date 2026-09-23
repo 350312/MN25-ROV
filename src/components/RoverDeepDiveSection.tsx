@@ -111,7 +111,7 @@ export const RoverDeepDiveSection: React.FC<RoverDeepDiveSectionProps> = ({
 
             <div className="relative rounded-2xl md:rounded-3xl border border-amber-500/30 overflow-hidden bg-black shadow-2xl aspect-[9/14] max-h-[580px] mx-auto flex items-center justify-center">
               <img
-                src="/src/assets/images/mars_orbit_crescent_1790134071042.jpg"
+                src="/assets/images/mars_orbit_crescent_1790134071042.jpg"
                 alt="Orbital crescent view of planet Mars with illuminated atmospheric rim and craters"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"

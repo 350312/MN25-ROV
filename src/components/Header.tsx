@@ -32,7 +32,7 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onSelectTab }) => {
           {/* Circular MN -25 Logo Emblem from Uploaded Badge */}
           <div className="w-8 h-8 rounded-full border border-amber-500/60 bg-black overflow-hidden relative shadow-[0_0_12px_rgba(245,158,11,0.35)]">
             <img
-              src="/src/assets/images/bup_mn25_logo_1790137193440.jpg"
+              src="/assets/images/bup_mn25_logo_1790137193440.jpg"
               alt="BUP Mars Rover MN -25 Logo"
               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
             />

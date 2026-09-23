@@ -41,7 +41,7 @@ export const VisionSection: React.FC<VisionSectionProps> = ({ onExploreMission }
             {/* Small emblem badge */}
             <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-amber-500/50 bg-black/90 text-amber-300 text-xs font-mono uppercase tracking-wider shadow-[0_0_18px_rgba(245,158,11,0.25)] font-semibold">
               <img
-                src="/src/assets/images/bup_mn25_logo_1790137193440.jpg"
+                src="/assets/images/bup_mn25_logo_1790137193440.jpg"
                 alt="MN -25 Logo"
                 className="w-4 h-4 rounded-full object-cover border border-amber-500/60"
               />
@@ -110,7 +110,7 @@ export const VisionSection: React.FC<VisionSectionProps> = ({ onExploreMission }
               {/* Rover CAD Image */}
               <div className="relative aspect-[4/3] bg-black overflow-hidden flex items-center justify-center">
                 <img
-                  src="/src/assets/images/monpura25_cad_sample_1790136646700.jpg"
+                  src="/assets/images/monpura25_cad_sample_1790136646700.jpg"
                   alt="Monpura 25 Rover Prototype CAD Render from Design Sample Slide 15"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"

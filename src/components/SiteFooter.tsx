@@ -101,7 +101,7 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({
             <div className="pt-4 border-t border-white/15 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
               <div className="w-10 h-10 rounded-full border-2 border-amber-500/80 p-0.5 bg-black shadow-[0_0_15px_rgba(245,158,11,0.5)] shrink-0">
                 <img
-                  src="/src/assets/images/bup_mn25_logo_1790137193440.jpg"
+                  src="/assets/images/bup_mn25_logo_1790137193440.jpg"
                   alt="BUP Mars Rover MN -25 Logo"
                   className="w-full h-full object-cover rounded-full"
                 />
@@ -130,7 +130,7 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({
             <div className="flex items-center gap-3.5">
               <div className="w-11 h-11 rounded-full border-2 border-amber-500 bg-black overflow-hidden shadow-[0_0_15px_rgba(245,158,11,0.4)]">
                 <img
-                  src="/src/assets/images/bup_mn25_logo_1790137193440.jpg"
+                  src="/assets/images/bup_mn25_logo_1790137193440.jpg"
                   alt="MN -25 Logo"
                   className="w-full h-full object-cover"
                 />

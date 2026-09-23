@@ -113,14 +113,14 @@ export const AnimatedMarsBackground: React.FC = () => {
       <div className="absolute inset-0 overflow-hidden">
         {/* Desktop / Landscape view */}
         <img
-          src="/src/assets/images/vivid_red_mars_bright_1790135712320.jpg"
+          src="/assets/images/vivid_red_mars_bright_1790135712320.jpg"
           alt="Bright Reddish Animated Mars"
           className="hidden md:block absolute w-[116%] h-[116%] -top-[8%] -left-[8%] object-cover object-left animate-mars-orbit filter brightness-115 contrast-125 saturate-135"
         />
 
         {/* Mobile / Vertical view */}
         <img
-          src="/src/assets/images/vivid_red_mars_vertical_1790135730689.jpg"
+          src="/assets/images/vivid_red_mars_vertical_1790135730689.jpg"
           alt="Bright Reddish Animated Mars Mobile"
           className="md:hidden absolute w-[124%] h-[124%] -top-[12%] -left-[12%] object-cover object-left animate-mars-orbit filter brightness-115 contrast-125 saturate-135"
         />

@@ -140,7 +140,7 @@ export default function App() {
                 {/* Team MN -25 Micro Badge */}
                 <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-amber-500/40 bg-black/70 backdrop-blur-md text-amber-300 text-xs font-mono tracking-wider shadow-[0_0_15px_rgba(245,158,11,0.2)]">
                   <img
-                    src="/src/assets/images/bup_mn25_logo_1790137193440.jpg"
+                    src="/assets/images/bup_mn25_logo_1790137193440.jpg"
                     alt="MN -25 Logo"
                     className="w-4 h-4 rounded-full object-cover border border-amber-500/50"
                   />
