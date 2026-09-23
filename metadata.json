@@ -1,0 +1,6 @@
+{
+  "name": "Mars Exploration Initiative",
+  "description": "Exploring the Red Planet - Unveiling Mars: The Latest Findings from our Robotic Missions with interactive telemetry, ambient sound, and exploration gallery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
