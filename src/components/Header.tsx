@@ -10,7 +10,6 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onSelectTab }) => {
     { label: 'VISION', id: 'vision' },
     { label: 'MISSION', id: 'mission' },
     { label: 'TEAM', id: 'team' },
-    { label: 'BD TEAMS', id: 'bangladesh-teams' },
     { label: 'WHAT IS ROVER?', id: 'what-is-rover' },
   ];
 
@@ -19,18 +18,18 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onSelectTab }) => {
       {/* Brand / Logo Lockup */}
       <button 
         onClick={() => onSelectTab('')}
-        className="group flex items-center gap-3.5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-lg p-1 transition-transform active:scale-98 cursor-pointer"
+        className="group flex items-center gap-3.5 md:gap-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-xl p-1 transition-transform active:scale-98 cursor-pointer"
       >
-        {/* Reticle Target Frame with MN -25 Emblem */}
-        <div className="relative w-11 h-11 flex items-center justify-center">
+        {/* Reticle Target Frame with Bigger MN -25 Emblem */}
+        <div className="relative w-14 h-14 md:w-16 md:h-16 flex items-center justify-center shrink-0">
           {/* Reticle corner marks */}
-          <span className="absolute top-0 left-0 w-2.5 h-2.5 border-t-1.5 border-l-1.5 border-slate-300 group-hover:border-amber-400 transition-colors" />
-          <span className="absolute top-0 right-0 w-2.5 h-2.5 border-t-1.5 border-r-1.5 border-slate-300 group-hover:border-amber-400 transition-colors" />
-          <span className="absolute bottom-0 left-0 w-2.5 h-2.5 border-b-1.5 border-l-1.5 border-slate-300 group-hover:border-amber-400 transition-colors" />
-          <span className="absolute bottom-0 right-0 w-2.5 h-2.5 border-b-1.5 border-r-1.5 border-slate-300 group-hover:border-amber-400 transition-colors" />
+          <span className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-slate-300 group-hover:border-amber-400 transition-colors" />
+          <span className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-slate-300 group-hover:border-amber-400 transition-colors" />
+          <span className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-slate-300 group-hover:border-amber-400 transition-colors" />
+          <span className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-slate-300 group-hover:border-amber-400 transition-colors" />
           
           {/* Circular MN -25 Logo Emblem from Uploaded Badge */}
-          <div className="w-8 h-8 rounded-full border border-amber-500/60 bg-black overflow-hidden relative shadow-[0_0_12px_rgba(245,158,11,0.35)]">
+          <div className="w-11 h-11 md:w-13 md:h-13 rounded-full border-2 border-amber-500/80 bg-black overflow-hidden relative shadow-[0_0_18px_rgba(245,158,11,0.5)]">
             <img
               src="/assets/images/bup_mn25_logo_1790137193440.jpg"
               alt="BUP Mars Rover MN -25 Logo"
@@ -39,11 +38,20 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onSelectTab }) => {
           </div>
         </div>
 
-        {/* Text Wordmark */}
-        <div className="flex flex-col tracking-wider leading-[1.08] text-[11px] md:text-[12px] font-space font-bold uppercase text-slate-200">
-          <span className="group-hover:text-amber-400 transition-colors text-white tracking-wider font-extrabold">MN -25</span>
-          <span className="group-hover:text-white transition-colors">MARS ROVER TEAM</span>
-          <span className="text-emerald-400 text-[10px] tracking-widest font-mono">BUP // EXPEDITION</span>
+        {/* Text Wordmark: "BUP MARS ROVER TEAM" */}
+        <div className="flex flex-col tracking-wider leading-tight text-left">
+          <span className="text-white font-space font-extrabold text-sm sm:text-base md:text-lg tracking-wider group-hover:text-amber-400 transition-colors uppercase drop-shadow">
+            BUP MARS ROVER TEAM
+          </span>
+          <div className="flex items-center gap-2 mt-0.5">
+            <span className="text-amber-400 font-mono text-[11px] sm:text-xs font-extrabold tracking-widest">
+              MN -25
+            </span>
+            <span className="text-slate-500 text-xs">•</span>
+            <span className="text-emerald-400 text-[10px] sm:text-[11px] tracking-widest font-mono font-semibold">
+              EXPEDITION
+            </span>
+          </div>
         </div>
       </button>
 
@@ -72,17 +80,32 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onSelectTab }) => {
         </div>
       </nav>
 
-      {/* Mobile Menu Button */}
-      <div className="md:hidden">
-        <button
-          onClick={() => onSelectTab(activeTab ? '' : 'vision')}
-          className="p-2.5 rounded-full border border-white/20 bg-black/50 text-slate-200 hover:text-white focus:outline-none"
-          aria-label="Toggle navigation menu"
+      {/* Direct In-App Download Button */}
+      <div className="flex items-center gap-2.5">
+        <a
+          href="/mn25.zip"
+          download="mn25.zip"
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-emerald-500/50 bg-emerald-950/70 hover:bg-emerald-800/80 text-emerald-300 hover:text-white font-mono text-xs transition-all shadow-[0_0_12px_rgba(0,255,157,0.25)] cursor-pointer"
+          title="Download full project code as ZIP"
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
           </svg>
-        </button>
+          <span className="font-semibold">DOWNLOAD ZIP</span>
+        </a>
+
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <button
+            onClick={() => onSelectTab(activeTab ? '' : 'vision')}
+            className="p-2.5 rounded-full border border-white/20 bg-black/50 text-slate-200 hover:text-white focus:outline-none"
+            aria-label="Toggle navigation menu"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
       </div>
     </header>
   );
