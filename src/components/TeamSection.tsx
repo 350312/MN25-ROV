@@ -5,11 +5,11 @@ export const TeamSection: React.FC = () => {
   const [selectedSubteam, setSelectedSubteam] = useState<string>('all');
 
   const categories = [
-    { id: 'all', label: 'All Engineers' },
-    { id: 'software', label: 'Software' },
+    { id: 'all', label: 'All Personnel' },
     { id: 'mechanical', label: 'Mechanical' },
     { id: 'electrical', label: 'Electrical' },
-    { id: 'outreach', label: 'Business & Outreach' },
+    { id: 'software', label: 'Software & Autonomy' },
+    { id: 'science', label: 'Science Division' },
   ];
 
   const filteredMembers = selectedSubteam === 'all'
@@ -49,7 +49,7 @@ export const TeamSection: React.FC = () => {
             <img
               src="/assets/images/bup_mn25_logo_1790137193440.jpg"
               alt="MN -25 Logo"
-              className="w-4 h-4 rounded-full object-cover border border-amber-500/50"
+              className="w-5 h-5 rounded-full object-cover border border-amber-500/60 shadow-[0_0_8px_rgba(245,158,11,0.4)]"
             />
             <span>PERSONNEL ROSTER // MULTI-DISCIPLINARY COHORT</span>
           </div>
@@ -57,22 +57,22 @@ export const TeamSection: React.FC = () => {
             Meet Team MN -25
           </h2>
           <p className="text-base text-slate-100 leading-relaxed font-normal bg-black/40 backdrop-blur-md p-5 rounded-2xl border border-white/10">
-            An elite student engineering division from Bangladesh University of Professionals. Our members design custom planetary drivetrains, power electronics, embedded firmware, and neural vision stacks to compete on the world stage.
+            An elite student engineering and planetary science division from Bangladesh University of Professionals. Our members design custom planetary drivetrains, power electronics, embedded firmware, neural vision stacks, and onboard bio-chemical science assay instruments to compete on the world stage.
           </p>
         </div>
 
-        {/* Stat Strip Reusing the "TOTAL DISTANCE / OPERATIONAL SOLS / HERMETIC CORES" Format */}
+        {/* Stat Strip Reusing the Mission Metrics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="p-5 rounded-2xl bg-[#0b0e18]/90 border border-white/15 backdrop-blur-xl shadow-lg">
             <div className="text-[11px] font-mono uppercase text-slate-300 font-semibold">Roster Strength</div>
             <div className="text-2xl sm:text-3xl font-bold font-mono text-[#00ff9d] mt-1.5">30+</div>
-            <div className="text-[11px] text-slate-200 mt-0.5 font-mono">Undergraduate engineers</div>
+            <div className="text-[11px] text-slate-200 mt-0.5 font-mono">Engineers & Scientists</div>
           </div>
 
           <div className="p-5 rounded-2xl bg-[#0b0e18]/90 border border-white/15 backdrop-blur-xl shadow-lg">
             <div className="text-[11px] font-mono uppercase text-slate-300 font-semibold">Core Sub-Teams</div>
             <div className="text-2xl sm:text-3xl font-bold font-mono text-amber-400 mt-1.5">04 Units</div>
-            <div className="text-[11px] text-slate-200 mt-0.5 font-mono">Mech, Elec, Soft, Outreach</div>
+            <div className="text-[11px] text-slate-200 mt-0.5 font-mono">Mech, Elec, Soft, Science</div>
           </div>
 
           <div className="p-5 rounded-2xl bg-[#0b0e18]/90 border border-white/15 backdrop-blur-xl shadow-lg">
@@ -88,7 +88,7 @@ export const TeamSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Rounded-Pill Tab Nav Matching Reference Style */}
+        {/* Rounded-Pill Tab Nav */}
         <div className="flex items-center gap-2 overflow-x-auto pb-2 border-b border-white/15">
           {categories.map((cat) => {
             const isActive = selectedSubteam === cat.id;
@@ -113,15 +113,15 @@ export const TeamSection: React.FC = () => {
           {filteredMembers.map((member) => {
             const isSoftware = member.subteam === 'software';
             const isElectrical = member.subteam === 'electrical';
-            const isOutreach = member.subteam === 'outreach';
+            const isScience = member.subteam === 'science';
             
             const accentColor = isSoftware 
-              ? 'text-cyan-300 border-cyan-500/40' 
+              ? 'text-cyan-300 border-cyan-500/40 bg-cyan-950/40' 
               : isElectrical 
-              ? 'text-amber-300 border-amber-500/40' 
-              : isOutreach
-              ? 'text-purple-300 border-purple-500/40' 
-              : 'text-[#00ff9d] border-[#00ff9d]/40';
+              ? 'text-amber-300 border-amber-500/40 bg-amber-950/40' 
+              : isScience
+              ? 'text-purple-300 border-purple-500/40 bg-purple-950/40' 
+              : 'text-[#00ff9d] border-[#00ff9d]/40 bg-emerald-950/40';
 
             return (
               <div
@@ -129,7 +129,7 @@ export const TeamSection: React.FC = () => {
                 className="group relative rounded-2xl bg-[#0b0e18]/90 border border-white/15 hover:border-[#00ff9d]/50 backdrop-blur-xl p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-[0_0_25px_rgba(0,255,157,0.2)] hover:-translate-y-1 shadow-lg"
               >
                 <div className="space-y-4">
-                  {/* Avatar / Photo Placeholder with Futuristic Tech Border */}
+                  {/* Avatar / Photo Placeholder with Tech Border */}
                   <div className="flex items-center justify-between">
                     <div className="relative w-14 h-14 rounded-xl overflow-hidden border border-white/20 bg-slate-900 group-hover:border-[#00ff9d]/60 transition-colors">
                       <img
@@ -140,7 +140,7 @@ export const TeamSection: React.FC = () => {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
                     </div>
 
-                    <span className={`text-[10px] font-mono tracking-wider font-semibold px-2.5 py-1 rounded-full border bg-black/70 ${accentColor}`}>
+                    <span className={`text-[10px] font-mono tracking-wider font-semibold px-2.5 py-1 rounded-full border ${accentColor}`}>
                       {member.subteamLabel.toUpperCase()}
                     </span>
                   </div>
@@ -155,10 +155,28 @@ export const TeamSection: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Confident Engineering Bio */}
+                  {/* Subteam Squad if present */}
+                  {member.squad && (
+                    <div className="text-[10px] font-mono text-cyan-400 bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-800/40 inline-block">
+                      {member.squad}
+                    </div>
+                  )}
+
+                  {/* Bio */}
                   <p className="text-xs text-slate-100 leading-relaxed font-normal">
                     {member.bio}
                   </p>
+
+                  {/* Tools / Stacks */}
+                  {member.tools && (
+                    <div className="pt-2 flex flex-wrap gap-1.5">
+                      {member.tools.map((t, idx) => (
+                        <span key={idx} className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 border border-white/10 text-slate-300">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
 
                 {/* Subsystem Focus Badge */}
@@ -175,5 +193,4 @@ export const TeamSection: React.FC = () => {
     </section>
   );
 };
-
 
