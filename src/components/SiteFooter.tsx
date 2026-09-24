@@ -205,16 +205,7 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({
                   className="text-slate-200 hover:text-[#00ff9d] transition-colors flex items-center gap-2 cursor-pointer font-medium"
                 >
                   <span className="text-emerald-400 font-mono text-xs">04</span>
-                  <span>Meet Team MN -25 Roster</span>
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onScrollToSection('bangladesh-teams')}
-                  className="text-slate-200 hover:text-[#00ff9d] transition-colors flex items-center gap-2 cursor-pointer font-medium"
-                >
-                  <span className="text-emerald-400 font-mono text-xs">05</span>
-                  <span>BD Space Robotics Alliance</span>
+                  <span>BUP Mars Rover Science Team</span>
                 </button>
               </li>
               <li>
@@ -222,7 +213,7 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({
                   onClick={() => onScrollToSection('what-is-rover')}
                   className="text-slate-200 hover:text-[#00ff9d] transition-colors flex items-center gap-2 cursor-pointer font-medium"
                 >
-                  <span className="text-emerald-400 font-mono text-xs">06</span>
+                  <span className="text-emerald-400 font-mono text-xs">05</span>
                   <span>What is a Rover? Science Hub</span>
                 </button>
               </li>
@@ -231,7 +222,7 @@ export const SiteFooter: React.FC<SiteFooterProps> = ({
                   onClick={onOpenGallery}
                   className="text-amber-300 hover:text-white transition-colors flex items-center gap-2 cursor-pointer font-medium"
                 >
-                  <span className="text-amber-400 font-mono text-xs">07</span>
+                  <span className="text-amber-400 font-mono text-xs">06</span>
                   <span>Mars Telemetry Gallery (9 Transmissions)</span>
                 </button>
               </li>

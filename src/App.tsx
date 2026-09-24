@@ -15,7 +15,6 @@ import { RoverDeepDiveSection } from './components/RoverDeepDiveSection';
 import { VisionSection } from './components/VisionSection';
 import { MissionSection } from './components/MissionSection';
 import { TeamSection } from './components/TeamSection';
-import { BangladeshTeamsSection } from './components/BangladeshTeamsSection';
 import { AnimatedMarsBackground } from './components/AnimatedMarsBackground';
 import { ROVER_DATA, RoverTelemetry } from './data/marsData';
 
@@ -112,10 +111,9 @@ export default function App() {
               }`}
             />
 
-            {/* Seamless corner gradient masks to permanently conceal any bottom-right Kling watermark artifact */}
-            <div className="absolute bottom-0 right-0 w-64 h-32 bg-gradient-to-tl from-black/95 via-black/75 to-transparent pointer-events-none z-10" />
-            <div className="absolute bottom-0 left-0 w-64 h-28 bg-gradient-to-tr from-black/80 to-transparent pointer-events-none z-10" />
-            <div className="absolute top-0 right-0 w-48 h-24 bg-gradient-to-bl from-black/80 to-transparent pointer-events-none z-10" />
+            {/* Smooth full-bleed natural atmospheric gradient without harsh rectangular box seams */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-[#060405]/85 pointer-events-none z-10" />
+            <div className="absolute bottom-0 inset-x-0 h-28 bg-gradient-to-t from-[#060405] via-[#060405]/60 to-transparent pointer-events-none z-10" />
           </div>
 
           {/* 1. Header Zone: Reticle Logo & Navigation Pill */}
@@ -137,15 +135,18 @@ export default function App() {
               {/* Left Hero Narrative Block */}
               <div className="max-w-xl xl:max-w-2xl space-y-4 md:space-y-6">
                 
-                {/* Team MN -25 Micro Badge */}
-                <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-amber-500/40 bg-black/70 backdrop-blur-md text-amber-300 text-xs font-mono tracking-wider shadow-[0_0_15px_rgba(245,158,11,0.2)]">
-                  <img
-                    src="/assets/images/bup_mn25_logo_1790137193440.jpg"
-                    alt="MN -25 Logo"
-                    className="w-4 h-4 rounded-full object-cover border border-amber-500/50"
-                  />
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#00ff9d] animate-pulse" />
-                  <span>MN -25 // BUP MARS ROVER TEAM</span>
+                {/* Team BUP Mars Rover Team Badge with Bigger Logo */}
+                <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-amber-500/50 bg-black/75 backdrop-blur-md text-amber-300 text-xs sm:text-sm font-mono tracking-wider shadow-[0_0_20px_rgba(245,158,11,0.25)]">
+                  <div className="w-7 h-7 rounded-full border border-amber-500/80 bg-black overflow-hidden relative shadow-[0_0_10px_rgba(245,158,11,0.5)] shrink-0">
+                    <img
+                      src="/assets/images/bup_mn25_logo_1790137193440.jpg"
+                      alt="BUP Mars Rover Team MN -25 Logo"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <span className="w-2 h-2 rounded-full bg-[#00ff9d] animate-pulse" />
+                  <span className="font-semibold tracking-wide text-white">BUP MARS ROVER TEAM</span>
+                  <span className="text-amber-400 font-bold">// MN -25</span>
                 </div>
 
                 {/* Massive Bold Headline matching reference typography */}
@@ -217,13 +218,10 @@ export default function App() {
           onOpenGallery={() => setIsGalleryOpen(true)}
         />
 
-        {/* 6. Team Section: Meet Team Monpura 25 Roster & Sub-Teams */}
+        {/* 6. Science Team Section: Meet BUP Mars Rover Science Division */}
         <TeamSection />
 
-        {/* 7. Bonus Section: Mars Rover Teams in Bangladesh Comparison */}
-        <BangladeshTeamsSection />
-
-        {/* 8. Dedicated Science Section: "What is a Rover?" (Benefits, Innovations, and Orbit View) */}
+        {/* 7. Dedicated Science Section: "What is a Rover?" (Benefits, Innovations, and Orbit View) */}
         <RoverDeepDiveSection
           onBackToHero={scrollToHero}
           onOpenGallery={() => setIsGalleryOpen(true)}
